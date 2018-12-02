@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BroasjApplication</string>
+    <string name="add">اضافه</string>
+    <string name="remove">حذف</string>
+    <string name="btn_save">ذخیره</string>
+    <string name="hint_book_code">کد کتاب</string>
+    <string name="hint_writername">نام نویسنده</string>
+    <string name="hite_publishers">انتشارات</string>
+    <string name="bookname">نام کتاب</string>
+    <string name="price">قیمت</string>
+    <string name="btnn_save">#ff00</string>
+    <string name="btn_search">جستجو</string>
+    <string name="update">ویرایش</string>
+    <string name="bookname_search">نام کتاب جهت یاد آوری کد کتاب</string>
+    <string name="btn_edit">ویرایش</string>
+    <string name="btn_searchItem">جستجو</string>
+    <string name="hint_book_code_search">کد کتاب را جهت جستجو وارد کنید</string>
+    <string name="delete">حذف</string>
+    <string name="btn_searchall">همه کتاب ها</string>
+</resources>

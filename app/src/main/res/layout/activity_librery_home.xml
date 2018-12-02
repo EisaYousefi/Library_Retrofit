@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c1c1cc"
+    android:padding="6dp"
+    tools:context=".LibreryHomeActivity">
+
+    <TabHost
+        android:id="@+id/tabhost_librery"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="9dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgrand" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_codeBook_newbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/hint_book_code"
+                            android:inputType="number" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_nameBook_newbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/bookname" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_writname_newbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/hint_writername" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_publiser_newwbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/hite_publishers" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_price_newbook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/price"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_save_newbook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="50dp"
+                        android:drawableRight="@drawable/ic_add"
+                        android:text="@string/btn_save" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#505046"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+
+                    <AutoCompleteTextView
+
+                        android:id="@+id/autocomple_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+
+                        android:hint="@string/bookname_search" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edittext_codeBook_searchItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:focusedByDefault="true"
+                            android:hint="@string/hint_book_code_search"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edittext_namebook_searchItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/bookname"
+                            android:inputType="text" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edittext_writname_nsearchItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/hint_writername" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edittext_publiser_searchItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/hite_publishers" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edittext_price_searchItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="@string/price"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_search_searchItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_searchitem"
+                            android:text="@string/btn_searchItem" />
+
+                        <Button
+                            android:id="@+id/btn_Update_searchItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_update_black_24dp"
+                            android:text="@string/btn_edit" />
+
+                        <Button
+                            android:id="@+id/btn_delete_searchItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_delete_black_24dp"
+                            android:text="@string/delete" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#6c6c4c"
+                        android:orientation="vertical">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_idbook_amanattt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/edittext"
+                                android:hint="کد کتاب جهت جستجو"
+                                android:inputType="number" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_bookName_amanat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/edittext"
+                                android:hint="نام کتاب"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_writerNAme_amanat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/edittext"
+                                android:hint="نام نویسنده"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#375c70"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_number_azo_amanat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/edittext"
+                                android:hint="شماره عضویت جهت جستجو"
+                                android:inputType="number" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_name_azo_amanat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittext"
+                                android:hint="نام عضو"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_tel_azo_amanat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittext"
+                                android:hint="شماره تلفن"
+                                android:inputType="text" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/btn_save_amanat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="جستجو و ذخیره" />
+
+
+                        <Button
+                            android:id="@+id/btn_bargasht_amanat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="کد کتاب را در قسمت کد کتاب وارد کرده وجهت برگشت امانت اینجا را کلیک کنید" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_searchtab4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_searchitem"
+                            android:text="@string/btn_searchall" />
+
+                        <Button
+                            android:id="@+id/btn_searchtab4_allazo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_searchitem"
+                            android:text="همه اعضا" />
+
+                        <Button
+                            android:id="@+id/btn_searchtab4_allamanat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_searchitem"
+                            android:text="امانت رفته ها " />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_tab444444"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#effd"
+                        android:gravity="center"
+                        android:text="........."
+                        android:textColor="#ff00"
+                        android:textSize="14sp" />
+
+                    <ListView
+                        android:id="@+id/listview_searchall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="15dp"></ListView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_number_azo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="شماره عضویت"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_name_famil_azo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="نام و نام خانوادگی " />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/tel_azo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext"
+                            android:hint="شماره موبایل" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_save_azo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="50dp"
+                        android:drawableRight="@drawable/ic_add"
+                        android:text="@string/btn_save" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="#796969"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#aa59d14e"
+                            android:gravity="center"
+                            android:text="ویرایش اعضای کتاب خانه"
+                            android:textColor="#5656c6"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btn_serach_azo_tab5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_search" />
+
+                        <Button
+                            android:id="@+id/btn_edit_az0_tab5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_edit" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</android.support.constraint.ConstraintLayout>

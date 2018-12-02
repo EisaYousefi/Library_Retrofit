@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BroasjApplication</string>
+    <string name="add">Add</string>
+    <string name="remove">Delete</string>
+    <string name="btn_save">SAve</string>
+    <string name="hint_book_code">BookId </string>
+    <string name="hint_writername"> writerName</string>
+    <string name="hite_publishers">Publisire</string>
+    <string name="bookname"> BookName</string>
+    <string name="price">Price</string>
+    <string name="btnn_save">#ff00</string>
+    <string name="btn_search">Search</string>
+    <string name="update">Edit</string>
+    <string name="bookname_search">Book name to recall book code</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_searchItem">Search</string>
+    <string name="hint_book_code_search">Enter the book code to search</string>
+    <string name="delete">Delete</string>
+    <string name="btn_searchall">AllBooks</string>
+</resources>
