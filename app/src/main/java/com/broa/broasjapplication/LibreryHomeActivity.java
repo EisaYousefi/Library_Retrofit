@@ -804,27 +804,27 @@ public class LibreryHomeActivity extends AppCompatActivity {
                     else {
                         //  alertdialog();
 
-                       Call<Azo> call = booksServise.createAzo(azo);
-                       call.enqueue(new Callback <Azo>() {
-                           @Override
-                           public void onResponse(Call <Azo> call, Response <Azo> response) {
-                               if(response.isSuccessful()){
-                                   toastCustomer("ذخیره شد");
-                                   input_id_azo.setText("");
-                                   input_tel_azo.setText("");
-                                   input_name_azo.setText("");
-                                   inputid.requestFocus();
+                        Call<Azo> call = booksServise.createAzo(azo);
+                        call.enqueue(new Callback <Azo>() {
+                            @Override
+                            public void onResponse(Call <Azo> call, Response <Azo> response) {
+                                if(response.isSuccessful()){
+                                    toastCustomer("ذخیره شد");
+                                    input_id_azo.setText("");
+                                    input_tel_azo.setText("");
+                                    input_name_azo.setText("");
+                                    inputid.requestFocus();
 
-                               }
+                                }
 
-                           }
+                            }
 
-                           @Override
-                           public void onFailure(Call <Azo> call, Throwable t) {
-                               toastCustomer("ارتباط با سرور را برسی کنید");
+                            @Override
+                            public void onFailure(Call <Azo> call, Throwable t) {
+                                toastCustomer("ارتباط با سرور را برسی کنید");
 
-                           }
-                       });
+                            }
+                        });
 
                     }
                 }
